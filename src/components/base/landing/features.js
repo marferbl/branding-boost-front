@@ -13,15 +13,16 @@ import {
   Heading
 } from '@chakra-ui/react'
 import { FaMailBulk, FaRegChartBar, FaLaptopCode, FaAngleDoubleUp } from 'react-icons/fa';
+import { COLORS } from '../../../colors';
 
 
 const Feature = ({ heading, text, icon }) => {
   return (
-    <GridItem textAlign={"center"}>
+    <GridItem textAlign={"center"} fontFamily={"Montserrat"}>
       <Center mb={3}>
         {icon}
       </Center>
-      <chakra.h3 fontSize="xl" fontWeight="600" mb={5}>
+      <chakra.h3 fontSize="xl" fontWeight="600" mb={5} color={COLORS.brand4} >
         {heading}
       </chakra.h3>
       <chakra.p textAlign={'center'}>{text}</chakra.p>
@@ -31,11 +32,11 @@ const Feature = ({ heading, text, icon }) => {
 
 export default function Features() {
   return (
-    <Box as={Container} maxW="7xl" mt={14} p={4} pb={20} >
-      <Divider mt={12} mb={12} />
+    <Box as={Container} maxW="7xl" mt={14} p={4} pb={20}>
+      <Divider mb={12} />
 
       <Center pb={20}>
-        <Heading mb={3}>Nuestros servicios:</Heading>
+        <Heading mb={3} fontFamily={"Montserrat"}>Nuestros servicios:</Heading>
       </Center>
       <Grid
         templateColumns={{
@@ -47,22 +48,22 @@ export default function Features() {
         <Feature
           heading={'Desarrollo web'}
           text={'Haz que tu presencia online destaque con nuestro servicio de Desarrollo Web personalizado.'}
-          icon={<FaLaptopCode />}
+          icon={<FaLaptopCode size={30} color={COLORS.brand4} />}
         />
         <Feature
           heading={'Ads'}
           text={'Alcanza a tu audiencia objetivo y aumenta la visibilidad de tu marca con publicidad en redes sociales'}
-          icon={<FaAngleDoubleUp />}
+          icon={<FaAngleDoubleUp size={30} color={COLORS.brand4} />}
         />
         <Feature
           heading={'SEO'}
           text={'Aumenta la visibilidad de tu sitio web y atrae a más clientes potenciales con nuestro servicio de SEO.'}
-          icon={<FaRegChartBar />}
+          icon={<FaRegChartBar size={30} color={COLORS.brand4}  />}
         />
         <Feature
           heading={'Email Marketing'}
           text={'Conecta con con tu audiencia y haz crecer tu negocio con campañas de correo electrónico dirigidas.'}
-          icon={<FaMailBulk />}
+          icon={<FaMailBulk size={30} color={COLORS.brand4}  />}
         />
       </Grid>
     </Box>

@@ -35,6 +35,7 @@ export default function FormModal() {
                 bg={COLORS.brand2}
                 color={COLORS.brand4}
                 _hover={{ bg: COLORS.brand3 }}
+                fontFamily={"Montserrat"}
             >
                 Contáctanos
             </Button>

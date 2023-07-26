@@ -9,8 +9,10 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Text
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { COLORS } from "../../../colors";
 
 const Links = [""];
 
@@ -33,9 +35,9 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue("white", "gray.900")} px={4} >
+      <Box bg={useColorModeValue(COLORS.brand1, "gray.900")} px={4} fontFamily={'Montserrat'} >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Image src={"/logobooniuz.png"}  h={10} ml={10} />
+          <Text fontSize={24} as={"span"} ml={2} fontWeight={"bold"} color={"#D1B28C"}>Branding <Text as={"span"} color={COLORS.brand4}>boost </Text></Text>
           <Flex h={16} alignItems={"center"}>
             <IconButton
               size={"md"}

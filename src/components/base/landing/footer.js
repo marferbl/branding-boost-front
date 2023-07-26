@@ -10,6 +10,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { COLORS } from "../../../colors";
 
 const Logo = (props) => {
   return <Image src={"/logobooniuz.png"} h={10} ml={-2} />;
@@ -36,9 +37,10 @@ export default function FooterLanding() {
         >
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue("gray.700", "white")} />
+          <Text fontSize={24} as={"span"} fontWeight={"bold"} color={"#D1B28C"}>Branding <Text as={"span"} color={COLORS.brand4}>boost </Text></Text>
+             
             </Box>
-            <Text fontSize={"sm"}>© 2023 Booniuz. All rights reserved</Text>
+            <Text fontSize={"sm"}>© 2023 Branding boost. All rights reserved</Text>
           </Stack>
         </SimpleGrid>
       </Container>
