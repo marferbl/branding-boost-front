@@ -13,26 +13,26 @@ import FormModal from './formModal'
 
 export default function Hero() {
   return (
-    <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+    <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} fontFamily={"Montserrat"}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
             <Text
+              fontFamily={"Montserrat"}
               as={'span'}
               position={'relative'}
             >
-              Impulsa tu negocio al 
+              Impulsa tu negocio al
             </Text>
-            <br />{' '}
-            <Text color={COLORS.brand4} as={'span'}>
-            éxito
+            <Text fontFamily={"Montserrat"} color={COLORS.brand4} as={'span'}>
+              {' '} éxito
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-          Marketing digital al alcance de tu mano. Te ayudamos a cumplir tus objetivos a largo plazo para tu negocio.
+            Marketing digital al alcance de tu mano. Te ayudamos a cumplir tus objetivos a largo plazo para tu negocio.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-           <FormModal/>
+            <FormModal />
           </Stack>
         </Stack>
       </Flex>

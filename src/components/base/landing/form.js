@@ -25,6 +25,7 @@ import {
   MdOutlineEmail,
 } from "react-icons/md";
 import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { COLORS } from "../../../colors";
 
 export default function FormDemo() {
   return (
@@ -38,7 +39,7 @@ export default function FormDemo() {
     >
       <Flex>
         <Box
-          bg="#a8f0ed"
+          bg={"#FAEEDD"}
           boxShadow={"lg"}
           color="white"
           borderRadius="lg"
@@ -49,8 +50,8 @@ export default function FormDemo() {
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
-                  <Heading color={"gray.700"}>Contáctanos</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.700">
+                  <Heading color={"gray.700"} fontFamily={'Montserrat'}>Contáctanos</Heading>
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} fontFamily={"Montserrat"} color="gray.700">
                     Mándanos un mensaje con tu consulta
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
@@ -74,7 +75,7 @@ export default function FormDemo() {
                         gap={2}
                       >
                         <MdEmail color="gray.600" size="20px" />
-                        <Text> booniuztech@gmail.com</Text>
+                        <Text> contacto@brandingboost.com</Text>
                       </Flex>
                       <Flex
                         height="48px"
@@ -121,17 +122,17 @@ export default function FormDemo() {
                           _hover={{
                             borderRadius: "gray.300",
                           }}
-                          placeholder="message"
+                          placeholder="Mensaje"
                         />
                       </FormControl>
                       <FormControl id="name" float="right">
                         <Button
                           variant="solid"
-                          bg="#FFC480"
-                          color="gray.600"
-                          _hover={{ bg: "#a8f0ed" }}
+                          bg={COLORS.brand4}
+                          color={COLORS.brand2}
+                          _hover={{ bg: COLORS.brand3, color: COLORS.brand4 }}
                         >
-                          Envíar
+                          Enviar
                         </Button>
                       </FormControl>
                     </VStack>

@@ -4,10 +4,12 @@ import FooterLanding from "../../components/base/landing/footer";
 import FormDemo from "../../components/base/landing/form";
 import Hero from "../../components/base/landing/hero";
 import Testimonials from "../../components/base/landing//testimonials";
+import Navbar from "../../components/base/landing/navbar";
 
 const LandingPage = () => {
   return (
     <>
+      <Navbar />
       <Hero />
       <Features />
       <Testimonials />
