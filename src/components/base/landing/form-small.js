@@ -68,13 +68,13 @@ export const FormContactSmall = ({ close }) => {
 
     return (
         <Box bg="white" borderRadius="lg">
-            <Text ml={7} mt={5} fontSize={24}>
+            <Text ml={7} mt={5} fontSize={{base: 18, md: 24}}>
                 Envíanos un correo:
             </Text>
             <Box m={8} color="#0B0E3F">
                 <VStack spacing={5}>
                     <FormControl id="name">
-                        <FormLabel>Nombre</FormLabel>
+                        <FormLabel fontSize={{base: 14, md: 16}}>Nombre</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                                 pointerEvents="none"
@@ -88,7 +88,7 @@ export const FormContactSmall = ({ close }) => {
                         </InputGroup>
                     </FormControl>
                     <FormControl id="name">
-                        <FormLabel>Correo electrónico</FormLabel>
+                        <FormLabel fontSize={{base: 14, md: 16}}>Correo electrónico</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                                 pointerEvents="none"
@@ -102,7 +102,7 @@ export const FormContactSmall = ({ close }) => {
                         </InputGroup>
                     </FormControl>
                     <FormControl id="name">
-                        <FormLabel>Mensaje</FormLabel>
+                        <FormLabel fontSize={{base: 14, md: 16}}>Mensaje</FormLabel>
                         <Textarea
                             borderColor="gray.300"
                             _hover={{

@@ -38,7 +38,7 @@ export default function Navbar() {
       <Box bg={useColorModeValue(COLORS.brand1, "gray.900")} px={4} fontFamily={'Montserrat'} >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Text fontSize={24} as={"span"} ml={2} fontWeight={"bold"} color={"#D1B28C"}>Branding <Text as={"span"} color={COLORS.brand4}>boost </Text></Text>
-          <Flex h={16} alignItems={"center"}>
+          {/* <Flex h={16} alignItems={"center"}>
             <IconButton
               size={"md"}
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -57,7 +57,7 @@ export default function Navbar() {
                 ))}
               </HStack>
             </HStack>
-          </Flex>
+          </Flex> */}
         </Flex>
 
         {isOpen ? (

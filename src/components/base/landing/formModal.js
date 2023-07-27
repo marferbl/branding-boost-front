@@ -19,7 +19,7 @@ import FormDemo from "./form";
 import { FormContactSmall } from "./form-small";
 import { COLORS } from "../../../colors"
 
-export default function FormModal() {
+export default function FormModal({label}) {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
 
@@ -37,17 +37,15 @@ export default function FormModal() {
                 _hover={{ bg: COLORS.brand3 }}
                 fontFamily={"Montserrat"}
             >
-                Contáctanos
+                {label || "Contáctanos"}
             </Button>
 
-            <Modal isOpen={isOpen} onClose={onClose} size={"2xl"}>
+            <Modal isOpen={isOpen} onClose={onClose} size={"xl"} >
                 <ModalOverlay />
-                <ModalContent>
+                <ModalContent rounded={{base:"xs", sm:'lg', md: "lg"}}>
                     <ModalCloseButton />
-                    <ModalBody>
-                        <Box>
+                    <ModalBody px={0}>
                             <FormContactSmall close={onClose} />
-                        </Box>
                     </ModalBody>
 
                     <ModalFooter></ModalFooter>

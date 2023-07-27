@@ -132,7 +132,7 @@ export default function CaptionCarousel() {
                 <Heading fontFamily={'Montserrat'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                <Text pr={{base: 8, md: 0}} fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
                   {card.text}
                 </Text>
                 <Link href={card.web} color={COLORS.brand4}>

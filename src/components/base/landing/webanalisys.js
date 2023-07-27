@@ -2,7 +2,7 @@
 
 import {
   Box,
-  chakra,
+  Center,
   Flex,
   SimpleGrid,
   Stat,
@@ -17,6 +17,7 @@ import { BiSolidPencil } from 'react-icons/bi'
 import { BiSolidUserVoice } from 'react-icons/bi'
 import { CheckCircleIcon } from '@chakra-ui/icons'
 import { COLORS } from "../../../colors"
+import FormModal from "./formModal"
 
 
 
@@ -35,13 +36,12 @@ export default function WebAnalysis() {
   )
 }
 
-
-
 function StatsCard(props) {
   const { title, stat, icon } = props
   return (
     <Stat
       px={{ base: 2, md: 4 }}
+      width={{ base: "100%", md: "fit-content" }}
       py={'5'}
       shadow={'md'}
       border={'1px solid'}
@@ -75,6 +75,7 @@ const BasicStatistics = () => {
         <StatsCard title={'Diseño'} stat={'65%'} icon={<BiSolidPencil size={20} />} />
         <StatsCard title={'Alcance'} stat={'40%'} icon={<BiSolidUserVoice size={22} />} />
       </SimpleGrid>
+      <Center py={6}><FormModal label="Pedir análisis" /></Center>
     </Box>
   )
 }
