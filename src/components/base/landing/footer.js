@@ -4,13 +4,16 @@ import {
   Box,
   Container,
   Image,
-  Link,
+  Flex,
   SimpleGrid,
   Stack,
   Text,
   useColorModeValue,
+  Link
+
 } from "@chakra-ui/react";
 import { COLORS } from "../../../colors";
+import { FaInstagram } from 'react-icons/fa'
 
 const Logo = (props) => {
   return <Image src={"/logobooniuz.png"} h={10} ml={-2} />;
@@ -32,15 +35,24 @@ export default function FooterLanding() {
     >
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
+          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 2fr" }}
           spacing={8}
         >
           <Stack spacing={6}>
-            <Box>
-          <Text fontSize={24} as={"span"} fontWeight={"bold"} color={"#D1B28C"}>Branding <Text as={"span"} color={COLORS.brand4}>boost </Text></Text>
-             
+            <Flex gap={2} align={"center"}>
+              <FaInstagram />
+              <Link href="https://www.instagram.com/brandingboost_dm" fontSize={"sm"}>brandingboost</Link>
+            </Flex>
+            <Text fontSize={'sm'}>contacto@brandingboost.es</Text>
+          </Stack>
+          <Stack spacing={6} />
+          <Stack spacing={6} />
+          <Stack spacing={6} />
+          <Stack spacing={6}>
+            <Box textAlign={"right"}>
+              <Text fontSize={24} as={"span"} fontWeight={"bold"} color={"#D1B28C"}>Branding <Text as={"span"} color={COLORS.brand4}>boost </Text></Text>
             </Box>
-            <Text fontSize={"sm"}>© 2023 Branding boost. All rights reserved</Text>
+            <Text textAlign={"right"} fontSize={"sm"}>© 2023 Branding boost. All rights reserved</Text>
           </Stack>
         </SimpleGrid>
       </Container>

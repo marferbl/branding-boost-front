@@ -5,6 +5,7 @@ import FormDemo from "../../components/base/landing/form";
 import Hero from "../../components/base/landing/hero";
 import Testimonials from "../../components/base/landing//testimonials";
 import Navbar from "../../components/base/landing/navbar";
+import WebAnalysis from "../../components/base/landing/webanalisys";
 
 const LandingPage = () => {
   return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <Navbar />
       <Hero />
       <Features />
+      <WebAnalysis />
       <Testimonials />
       <FormDemo />
       <FooterLanding />

@@ -32,7 +32,7 @@ const Feature = ({ heading, text, icon }) => {
 
 export default function Features() {
   return (
-    <Box as={Container} maxW="7xl" mt={14} p={4} pb={20}>
+    <Box bgColor={"#F6F0EB"} as={Container} maxW="full" mt={14} p={4} pb={20}>
       <Divider mb={12} />
 
       <Center pb={20}>

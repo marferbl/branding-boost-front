@@ -64,7 +64,7 @@ export default function FormDemo() {
                         gap={2}
                       >
                         <MdPhone color="gray.600" size="20px" />
-                        <Text> +34 685 59 13 40</Text>
+                        <Text> +34 677 78 55 19</Text>
                       </Flex>
 
                       <Flex

@@ -16,6 +16,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick'
+import { COLORS } from "../../../colors"
 
 // Settings for the slider
 const settings = {
@@ -38,37 +39,35 @@ export default function CaptionCarousel() {
   // buttons as the screen size changes
   const top = useBreakpointValue({ base: '90%', md: '50%' })
   const side = useBreakpointValue({ base: '30%', md: '40px' })
-
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Design Projects 1',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: 'Booniuz',
+      text: 'Creación de la página web y posicionamiento. Aumento del engagement y del tráfico a la web y a redes sociales, asi como formación en Google Ads y Facebook Ads',
       image:
-        'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-      web: 'https:/www.google.es',
+        'Creación de la página web y posicionamiento. Aumento del engagement y del tráfico a la web y a redes sociales, asi como formación en Google Ads y Facebook Ads',
+      web: 'https://www.booniuz.com/',
+      color: COLORS.brand1
     },
     {
-      title: 'Design Projects 2',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: 'Portfolio Designer',
+      text: "Creación del portfolio de product designer, asi como publicidad en Instagram y Facebook. Aumento del contacto con cliente en casi un 60% y 4 trabajos conseguidos en el primer mes",
       image:
         'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
-      web:'https:www.youtube.es'
+      web: 'https://sarafblasco.com/',
+      color: COLORS.brand2
     },
-    {
-      title: 'Design Projects 3',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image:
-        'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-      web: 'https:/www.twitter.es',
-    },
+    // {
+    //   title: 'Design Projects 3',
+    //   text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+    //   image:
+    //     'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    //   web: 'https:/www.twitter.es',
+    //   color: COLORS.brand3
+    // },
   ]
 
-  const goToWeb = (web) => {
-    console.log(web)
-    
-  }
   return (
     <Box position={'relative'} height={'500px'} width={'full'} overflow={'hidden'}>
       {/* CSS files for react-slick */}
@@ -109,39 +108,41 @@ export default function CaptionCarousel() {
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-      {cards.map((card, index) => (
-        <Box
-          key={index}
-          height={'6xl'}
-          position="relative"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
-          backgroundSize="cover"
-          backgroundImage={`url(${card.image})`}
-        >
-          {/* This is the block you need to change, to customize the caption */}
-          <Container size="container.lg" height="600px" position="relative">
-            <Stack
-              spacing={6}
-              w={'full'}
-              maxW={'lg'}
-              position="absolute"
-              top="50%"
-              transform="translate(0, -50%)"
-            >
-              <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                {card.title}
-              </Heading>
-              <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
-                {card.text}
-              </Text>
-             <Link  href='www.googgle.es'>
-              Visitar web <ExternalLinkIcon mx='2px' />
-              </Link>
-            </Stack>
-          </Container>
-        </Box>
-      ))}
-    </Slider>
-  </Box>
-);}
+        {cards.map((card, index) => (
+          <Box
+            key={index}
+            height={'6xl'}
+            position="relative"
+            backgroundColor={card.color}
+          // backgroundPosition="center"
+          // backgroundRepeat="no-repeat"
+          // backgroundSize="cover"
+          // backgroundImage={`url(${card.image})`}
+          >
+            {/* This is the block you need to change, to customize the caption */}
+            <Container size="container.lg" height="500px" position="relative" fontFamily={"Montserrat"}>
+              <Stack
+                spacing={6}
+                w={'full'}
+                maxW={'lg'}
+                position="absolute"
+                top="50%"
+                transform="translate(0, -50%)"
+              >
+                <Heading fontFamily={'Montserrat'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                  {card.title}
+                </Heading>
+                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                  {card.text}
+                </Text>
+                <Link href={card.web} color={COLORS.brand4}>
+                  Visitar web <ExternalLinkIcon mx='2px' pb={0.5} />
+                </Link>
+              </Stack>
+            </Container>
+          </Box>
+        ))}
+      </Slider>
+    </Box>
+  );
+}
