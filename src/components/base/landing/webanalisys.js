@@ -48,7 +48,7 @@ function StatsCard(props) {
       borderColor={useColorModeValue(COLORS.brand3, COLORS.brand2)}
       rounded={'lg'}>
       <Flex justifyContent={'space-between'} gap={3}>
-        <Box pl={{ base: 2, md: 4 }}>
+        <Box pl={{ base: 2, md: 5 }}>
           <StatLabel fontWeight={'medium'} isTruncated color={COLORS.brand4}>
             {title}
           </StatLabel>
