@@ -68,19 +68,16 @@ export const FormContactSmall = ({ close }) => {
 
     return (
         <Box bg="white" borderRadius="lg">
-            <Text ml={7} mt={5} fontSize={{base: 18, md: 24}}>
+            <Text ml={7} mt={5} fontSize={{ base: 18, md: 24 }}>
                 Envíanos un correo:
             </Text>
-            <Box m={8} color="#0B0E3F">
+            <Box m={8} color="#0B0E3F" fontFamily={"Montserrat"}>
                 <VStack spacing={5}>
                     <FormControl id="name">
-                        <FormLabel fontSize={{base: 14, md: 16}}>Nombre</FormLabel>
+                        <FormLabel fontSize={{ base: 14, md: 16 }}>Nombre</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                                pointerEvents="none"
-                                children={<BsPerson color="gray.800" />}
-                            />
                             <Input
+                                placeholder="Nombre"
                                 type="text"
                                 size="md"
                                 onChange={(e) => setFromName(e.target.value)}
@@ -88,13 +85,10 @@ export const FormContactSmall = ({ close }) => {
                         </InputGroup>
                     </FormControl>
                     <FormControl id="name">
-                        <FormLabel fontSize={{base: 14, md: 16}}>Correo electrónico</FormLabel>
+                        <FormLabel fontSize={{ base: 14, md: 16 }}>Correo electrónico</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                                pointerEvents="none"
-                                children={<MdOutlineEmail color="gray.800" />}
-                            />
                             <Input
+                                placeholder="Correo eléctrónico"
                                 type="text"
                                 size="md"
                                 onChange={(e) => setReplyTo(e.target.value)}
@@ -102,7 +96,7 @@ export const FormContactSmall = ({ close }) => {
                         </InputGroup>
                     </FormControl>
                     <FormControl id="name">
-                        <FormLabel fontSize={{base: 14, md: 16}}>Mensaje</FormLabel>
+                        <FormLabel fontSize={{ base: 14, md: 16 }}>Mensaje</FormLabel>
                         <Textarea
                             borderColor="gray.300"
                             _hover={{

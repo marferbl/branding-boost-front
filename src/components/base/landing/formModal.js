@@ -42,7 +42,7 @@ export default function FormModal({label}) {
 
             <Modal isOpen={isOpen} onClose={onClose} size={"xl"} >
                 <ModalOverlay />
-                <ModalContent rounded={{base:"xs", sm:'lg', md: "lg"}}>
+                <ModalContent>
                     <ModalCloseButton />
                     <ModalBody px={0}>
                             <FormContactSmall close={onClose} />

@@ -1,3 +1,6 @@
 body {
     font-family: "Montserrat";
 }
+.chakra-modal__content-container{
+    padding: 10px
+}

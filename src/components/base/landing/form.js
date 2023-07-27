@@ -14,7 +14,7 @@ import {
   FormLabel,
   Input,
   InputGroup,
-  InputLeftElement,
+  Center,
   Textarea,
 } from "@chakra-ui/react";
 import {
@@ -26,6 +26,7 @@ import {
 } from "react-icons/md";
 import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 import { COLORS } from "../../../colors";
+import FormModal from "./formModal";
 
 export default function FormDemo() {
   return (
@@ -43,11 +44,12 @@ export default function FormDemo() {
           boxShadow={"lg"}
           color="white"
           borderRadius="lg"
+          w={"100%"}
           m={{ sm: 4, md: 16, lg: 10 }}
           p={{ sm: 5, md: 5, lg: 16 }}
         >
           <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+            <Wrap spacing={{ base: 5, sm: 3, md: 5, lg: 10 }}>
               <WrapItem>
                 <Box>
                   <Heading color={"gray.700"} fontFamily={'Montserrat'}>Contáctanos</Heading>
@@ -92,32 +94,29 @@ export default function FormDemo() {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box bg="white" borderRadius="lg">
-                  <Box m={8} color="#0B0E3F">
+                <Box display={{ base: "none", lg: "block" }} bg={{ base: "white" }} borderRadius="lg">
+                  <Box m={6} color="#0B0E3F" fontFamily={"Montserrat"}>
                     <VStack spacing={5}>
                       <FormControl id="name">
                         <FormLabel>Nombre</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
+
+                          <Input type="text" size="md" placeholder="Nombre"
+                            bgColor={"white"} />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
                         <FormLabel>Correo electrónico</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
+
+                          <Input type="text" size="md" placeholder="Correo electrónico"
+                            bgColor={"white"} />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
                         <FormLabel>Mensaje</FormLabel>
                         <Textarea
+                          bgColor={"white"}
                           borderColor="gray.300"
                           _hover={{
                             borderRadius: "gray.300",
@@ -138,6 +137,9 @@ export default function FormDemo() {
                     </VStack>
                   </Box>
                 </Box>
+                <Center display={{ base: "block", lg: 'none' }}>
+                  <FormModal />
+                </Center>
               </WrapItem>
             </Wrap>
           </Box>
