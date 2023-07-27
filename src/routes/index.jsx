@@ -6,12 +6,14 @@ import PrivateRoute from "./privateRoute";
 import Dashboard from "../components/dashboard/dashboard";
 import { ProfilePage } from "../pages/profile/profile";
 import LandingPage from "../pages/landing/landing";
+import PricingPage from "../pages/pricing/pricing-page";
 
 export const PageRoutes = () => {
   return (
     <Router>
       <Routes>
         <Route path={"/"} element={<LandingPage />} />
+        <Route path={"/pricing"} element={<PricingPage />} />
         <Route path={"/newRouteHidden"} element={<App />} />
         <Route path={"private"} element={<PrivateRoute />}>
           <Route path={"dashboard"} element={<Dashboard />} />

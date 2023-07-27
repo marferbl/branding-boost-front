@@ -20,6 +20,7 @@ import RegisterForm from "../../components/Register/register-form";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
 
+
 export default function InitialPage() {
   const [showLogin, setShowLogin] = useState(true);
   const navigate = useNavigate();
