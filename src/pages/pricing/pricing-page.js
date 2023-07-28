@@ -12,8 +12,9 @@ const PricingPage = () => {
   return (
     <>
       <Navbar />
-      <Pricing/>
-      <FooterLanding/>
+      <Pricing />
+      <FormDemo />
+      <FooterLanding />
     </>
   );
 };
