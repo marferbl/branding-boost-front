@@ -54,7 +54,7 @@ export default function Pricing() {
                 direction={{ base: 'column', md: 'row' }}
                 textAlign="center"
                 justify="center"
-                spacing={{ base: 4, lg: 10 }}
+                spacing={{ base: 14, lg: 10 }}
                 py={10}>
                 <PriceWrapper>
                     <Box py={4} px={12}>
