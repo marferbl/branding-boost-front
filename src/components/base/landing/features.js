@@ -37,7 +37,7 @@ export default function Features() {
       <Divider mb={12} />
 
       <Center pb={20}>
-        <Heading mb={3} fontFamily={"Montserrat"}>Nuestros servicios:</Heading>
+        <Heading mb={3} fontFamily={"Montserrat"}>Nuestros servicios</Heading>
       </Center>
       <Grid
         templateColumns={{
