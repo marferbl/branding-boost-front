@@ -48,6 +48,13 @@ export default function Navbar() {
               >
                 <Link to="/pricing">Pricing</Link>
               </HStack>
+              <HStack
+                as={"nav"}
+                spacing={4}
+                display={{ base: "none", md: "flex" }}
+              >
+                <Link to="/blog">Blog</Link>
+              </HStack>
             </HStack>}
           </Flex>
         </Flex>
@@ -58,6 +65,15 @@ export default function Navbar() {
               <Link to="/pricing">Pricing</Link>
             </Stack>
           </Box>
+          
+        ) : null}
+         {isOpen ? (
+          <Box pb={4} display={{ md: "none" }} pt={4}>
+            <Stack as={"nav"} spacing={4} textAlign={"right"}>
+              <Link to="/blog">Blog</Link>
+            </Stack>
+          </Box>
+          
         ) : null}
       </Box>
     </>

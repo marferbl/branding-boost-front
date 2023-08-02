@@ -6,6 +6,7 @@ import Hero from "../../components/base/landing/hero";
 import Testimonials from "../../components/base/landing//testimonials";
 import Navbar from "../../components/base/landing/navbar";
 import WebAnalysis from "../../components/base/landing/webanalisys";
+import ArticleList from "../../components/base/landing/blog_landing";
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <Features />
       <WebAnalysis />
       <Testimonials />
+      <ArticleList />
       <FormDemo />
       <FooterLanding />
     </>

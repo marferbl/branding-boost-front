@@ -12,7 +12,7 @@ import {
   Container,
   Heading
 } from '@chakra-ui/react'
-import { FaMailBulk, FaRegChartBar, FaLaptopCode, FaAngleDoubleUp } from 'react-icons/fa';
+import { FaMailBulk, FaRegChartBar, FaLaptopCode, FaAngleDoubleUp, FaHashtag } from 'react-icons/fa';
 import { COLORS } from '../../../colors';
 
 
@@ -36,7 +36,7 @@ export default function Features() {
       <Divider mb={12} />
 
       <Center pb={20}>
-        <Heading mb={3} fontFamily={"Montserrat"}>Nuestros servicios:</Heading>
+        <Heading mb={3} fontFamily={"Montserrat"}>Nuestros servicios</Heading>
       </Center>
       <Grid
         templateColumns={{
@@ -52,7 +52,7 @@ export default function Features() {
         />
         <Feature
           heading={'Ads'}
-          text={'Alcanza a tu audiencia objetivo y aumenta la visibilidad de tu marca con publicidad en redes sociales'}
+          text={'Alcanza a tu audiencia objetivo y aumenta la visibilidad de tu marca con campañas de publicidad en redes sociales'}
           icon={<FaAngleDoubleUp size={30} color={COLORS.brand4} />}
         />
         <Feature
@@ -61,9 +61,9 @@ export default function Features() {
           icon={<FaRegChartBar size={30} color={COLORS.brand4}  />}
         />
         <Feature
-          heading={'Email Marketing'}
-          text={'Conecta con con tu audiencia y haz crecer tu negocio con campañas de correo electrónico dirigidas.'}
-          icon={<FaMailBulk size={30} color={COLORS.brand4}  />}
+          heading={'Redes Sociales'}
+          text={'Deja la gestión de tus redes sociales en nuestras manos y despreocúpate. Enfócate en lo que de verdad importa: hacer crecer tu negocio.'}
+          icon={<FaHashtag size={30} color={COLORS.brand4}  />}
         />
       </Grid>
     </Box>
