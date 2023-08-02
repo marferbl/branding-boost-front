@@ -68,7 +68,7 @@ export const FormContactSmall = ({ close }) => {
 
     return (
         <Box bg="white" borderRadius="lg">
-            <Text ml={7} mt={5} fontSize={{ base: 18, md: 24 }}>
+            <Text ml={7} mt={5} fontSize={{ base: 18, md: 24 }} fontFamily={"Montserrat"}>
                 Envíanos un correo:
             </Text>
             <Box m={8} color="#0B0E3F" fontFamily={"Montserrat"}>

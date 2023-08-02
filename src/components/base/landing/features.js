@@ -12,7 +12,8 @@ import {
   Container,
   Heading
 } from '@chakra-ui/react'
-import { FaMailBulk, FaRegChartBar, FaLaptopCode, FaAngleDoubleUp, FaHashtag } from 'react-icons/fa';
+import { FaMailBulk, FaRegChartBar, FaLaptopCode, FaAngleDoubleUp } from 'react-icons/fa';
+import { IoShareSocial } from 'react-icons/io5'
 import { COLORS } from '../../../colors';
 
 
@@ -56,14 +57,14 @@ export default function Features() {
           icon={<FaAngleDoubleUp size={30} color={COLORS.brand4} />}
         />
         <Feature
-          heading={'SEO'}
-          text={'Aumenta la visibilidad de tu sitio web y atrae a más clientes potenciales con nuestro servicio de SEO.'}
-          icon={<FaRegChartBar size={30} color={COLORS.brand4}  />}
+          heading={'Redes Sociales'}
+          text={'Somos especialistas en crecimiento de redes sociales. Consigue un perfil llamativo y atrae a miles de clientes'}
+          icon={<IoShareSocial size={30} color={COLORS.brand4} />}
         />
         <Feature
-          heading={'Redes Sociales'}
-          text={'Deja la gestión de tus redes sociales en nuestras manos y despreocúpate. Enfócate en lo que de verdad importa: hacer crecer tu negocio.'}
-          icon={<FaHashtag size={30} color={COLORS.brand4}  />}
+          heading={'SEO'}
+          text={'Aumenta la visibilidad de tu sitio web y atrae a más clientes potenciales con nuestro servicio de SEO.'}
+          icon={<FaRegChartBar size={30} color={COLORS.brand4} />}
         />
       </Grid>
     </Box>

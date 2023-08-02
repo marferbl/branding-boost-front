@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 import { COLORS } from '../../../colors'
+import PricingModal from './pricingModal'
 
 
 function PriceWrapper(props) {
@@ -53,22 +54,22 @@ export default function Pricing() {
                 direction={{ base: 'column', md: 'row' }}
                 textAlign="center"
                 justify="center"
-                spacing={{ base: 4, lg: 10 }}
+                spacing={{ base: 14, lg: 10 }}
                 py={10}>
                 <PriceWrapper>
                     <Box py={4} px={12}>
                         <Text fontWeight="500" fontSize="2xl" fontFamily={"Montserrat"}>
-                            Free
+                            Basic
                         </Text>
                         <HStack justifyContent="center">
-                            <Text fontSize="3xl" fontWeight="600">
-                                
+                            <Text fontSize="3xl" fontWeight="600" fontFamily={"Montserrat"}>
+                                €
                             </Text>
-                            <Text fontSize="5xl" fontWeight={"bold"} fontFamily={"Montserrat"}>
-                                Gratis
+                            <Text fontSize="5xl" fontWeight="900">
+                                120
                             </Text>
-                            <Text fontSize="3xl" color="gray.500">
-                                
+                            <Text fontSize="3xl" fontWeight={"800"} >
+                                /mes
                             </Text>
                         </HStack>
                     </Box>
@@ -79,24 +80,20 @@ export default function Pricing() {
                         <List spacing={3} textAlign="start" px={12} py={6} fontFamily={"Montserrat"}>
                             <ListItem>
                                 {IconCheck()}
-                            Análisis de la pagina web
+                                Redes Sociales
                             </ListItem>
                             <ListItem>
-                            {IconCheck()}
-                                Feedback detallado
+                                {IconCheck()}
+                                SEO
                             </ListItem>
                             <ListItem>
-                            {IconCheck()}
-                               Propuesta de cambio
+                                {IconCheck()}
+                                Campañas publicidad
                             </ListItem>
-                        
-                        
                         </List>
-                        {/* <Box w="80%" pt={7}>
-                            <Button w="full" colorScheme="red" variant="outline">
-                                Start trial
-                            </Button>
-                        </Box> */}
+                        <Box w="80%" pt={7}>
+                            <PricingModal label="basic" />
+                        </Box>
                     </VStack>
                 </PriceWrapper>
 
@@ -121,17 +118,17 @@ export default function Pricing() {
                         </Box>
                         <Box py={4} px={12}>
                             <Text fontWeight="500" fontSize="2xl" fontFamily={"Montserrat"}>
-                                Growth
+                                Standard
                             </Text>
                             <HStack justifyContent="center">
                                 <Text fontSize="3xl" fontWeight="600" fontFamily={"Montserrat"}>
                                     €
                                 </Text>
                                 <Text fontSize="5xl" fontWeight="900">
-                                    149
+                                    220
                                 </Text>
-                                <Text fontSize="3xl" color="gray.500" fontFamily={"Montserrat"}>
-                                    
+                                <Text fontSize="3xl" fontWeight={"800"} >
+                                    /mes
                                 </Text>
                             </HStack>
                         </Box>
@@ -141,48 +138,47 @@ export default function Pricing() {
                             borderBottomRadius={'xl'}>
                             <List spacing={3} textAlign="start" px={12} py={6} fontFamily={"Montserrat"}>
                                 <ListItem>
-                                {IconCheck()}
-                                    unlimited build minutes
+                                    {IconCheck()}
+                                    Redes Sociales
                                 </ListItem>
                                 <ListItem>
-                                {IconCheck()}
-                                    Lorem, ipsum dolor.
+                                    {IconCheck()}
+                                    SEO
                                 </ListItem>
                                 <ListItem>
-                                {IconCheck()}
-                                    5TB Lorem, ipsum dolor.
+                                    {IconCheck()}
+                                    Campañas publicidad
                                 </ListItem>
                                 <ListItem>
-                                {IconCheck()}
-                                    5TB Lorem, ipsum dolor.
+                                    {IconCheck()}
+                                    Página web
                                 </ListItem>
+
                                 <ListItem>
-                                {IconCheck()}
-                                    5TB Lorem, ipsum dolor.
+                                    {IconCheck()}
+                                    Soporte
                                 </ListItem>
                             </List>
-                            {/* <Box w="80%" pt={7}>
-                                <Button w="full" colorScheme="red">
-                                    Start trial
-                                </Button>
-                            </Box> */}
+                            <Box w="80%" pt={7}>
+                                <PricingModal label="standard" />
+                            </Box>
                         </VStack>
                     </Box>
                 </PriceWrapper>
                 <PriceWrapper>
                     <Box py={4} px={12}>
                         <Text fontWeight="500" fontSize="2xl" fontFamily={"Montserrat"}>
-                            Scale
+                            Premium
                         </Text>
                         <HStack justifyContent="center">
                             <Text fontSize="3xl" fontWeight="600" fontFamily={"Montserrat"}>
                                 €
                             </Text>
                             <Text fontSize="5xl" fontWeight="900">
-                                349
+                                350
                             </Text>
-                            <Text fontSize="3xl" color="gray.500">
-                                
+                            <Text fontSize="3xl" fontWeight={"800"} >
+                                /mes
                             </Text>
                         </HStack>
                     </Box>
@@ -192,23 +188,23 @@ export default function Pricing() {
                         borderBottomRadius={'xl'}>
                         <List spacing={3} textAlign="start" px={12} py={6} fontFamily={"Montserrat"}>
                             <ListItem>
-                            {IconCheck()}
-                                unlimited build minutes
+                                {IconCheck()}
+                                Lo incluido en Standard
+                            </ListItem>
+
+                            <ListItem>
+                                {IconCheck()}
+                                Google Analytics
                             </ListItem>
                             <ListItem>
-                            {IconCheck()}
-                                Lorem, ipsum dolor.
+                                {IconCheck()}
+                                Email Marketing
                             </ListItem>
-                            <ListItem>
-                            {IconCheck()}
-                                5TB Lorem, ipsum dolor.
-                            </ListItem>
+
                         </List>
-                        {/* <Box w="80%" pt={7}>
-                            <Button w="full" colorScheme="red" variant="outline">
-                                Start trial
-                            </Button>
-                        </Box> */}
+                        <Box w="80%" pt={7}>
+                            <PricingModal label="premium" />
+                        </Box>
                     </VStack>
                 </PriceWrapper>
             </Stack>
