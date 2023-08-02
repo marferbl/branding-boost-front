@@ -53,12 +53,12 @@ export default function Features() {
         />
         <Feature
           heading={'Ads'}
-          text={'Alcanza a tu audiencia objetivo y aumenta la visibilidad de tu marca con publicidad en redes sociales'}
+          text={'Alcanza a tu audiencia objetivo y aumenta la visibilidad de tu marca con publicidad en redes sociales.'}
           icon={<FaAngleDoubleUp size={30} color={COLORS.brand4} />}
         />
         <Feature
           heading={'Redes Sociales'}
-          text={'Somos especialistas en crecimiento de redes sociales. Consigue un perfil llamativo y atrae a miles de clientes'}
+          text={'Somos especialistas en crecimiento de redes sociales. Consigue un perfil llamativo y atrae a miles de clientes.'}
           icon={<IoShareSocial size={30} color={COLORS.brand4} />}
         />
         <Feature
