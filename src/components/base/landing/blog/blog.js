@@ -53,40 +53,13 @@ const BlogAuthor = (props) => {
 
 const ArticleList = () => {
   return (
-    <Container maxW={'7xl'} p="12">
-      <Heading as="h2" marginTop="5">
+    <Container maxW={'7xl'} p={{base: 4, lg: 12}}>
+      <Heading as="h2"  fontFamily={'Montserrat'}>
         Nuestros artículos
       </Heading>
       <Divider marginTop="5" />
       <Wrap spacing="30px" marginTop="5">
-      <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-          <Box w="100%">
-            <Box borderRadius="lg" overflow="hidden">
-              <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                <Image
-                  transform="scale(1.0)"
-                  src={
-                    '../google.jpg'}
-                  alt="some text"
-                  objectFit="contain"
-                  width="100%"
-                  transition="0.3s ease-in-out"
-                  _hover={{
-                    transform: 'scale(1.05)',
-                  }}
-                />
-              </Box>
-            </Box>
-            <BlogTags tags={['SEO', 'Posicionamiento']} marginTop={3} />
-            <Heading fontSize="xl" marginTop="2">
-              <Link href="/blog/seo-posicionamiento-google" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
-              SEO: Mejora tu Posicionamiento en Google             </Link>
-            </Heading>
-            <Text as="p" fontSize="md" marginTop="2">
-            Descubre la importancia del SEO para tu negocio en línea. Aprende a mejorar el posicionamiento en Google, obtener enlaces de calidad y brindar una experiencia excepcional al usuario. Con estrategias efectivas de SEO, alcanzarás el éxito en las búsquedas y atraerás a más clientes potenciales.
-            </Text>
-          </Box>
-        </WrapItem>
+      
         <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
@@ -96,8 +69,9 @@ const ArticleList = () => {
                   src={
                     '../contenidos.jpg'}
                   alt="some text"
-                  objectFit="contain"
+                  objectFit="cover"
                   width="100%"
+                  height={250}
                   transition="0.3s ease-in-out"
                   _hover={{
                     transform: 'scale(1.05)',
@@ -107,11 +81,11 @@ const ArticleList = () => {
             </Box>
             <BlogTags tags={['Leads', 'Contenido']} marginTop={3} />
             <Heading fontSize="xl" marginTop="2">
-              <Link href="/blog/marketing-leads" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
+              <Link href="/blog/marketing-leads" fontFamily={'Montserrat'} textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
               Marketing de Contenidos para Generar Leads              
               </Link>
             </Heading>
-            <Text as="p" fontSize="md" marginTop="2">
+            <Text textAlign={'justify'} as="p" fontSize="md" marginTop="2" fontFamily={'Montserrat'}>
             ¡Descubre el poder del Marketing de Contenidos para atraer clientes de calidad! Conoce a tu audiencia, crea contenido valioso en diversos formatos y optimiza para SEO. Seduce con landing pages irresistibles y nutre tus leads con campañas de email marketing. Prepárate para el éxito en el mundo digital con nuestra guía experta. 
             </Text>
           </Box>
@@ -125,8 +99,9 @@ const ArticleList = () => {
                   src={
                     '../rrss.jpg'}
                   alt="some text"
-                  objectFit="contain"
+                  objectFit="cover"
                   width="100%"
+                  height={250}
                   transition="0.3s ease-in-out"
                   _hover={{
                     transform: 'scale(1.05)',
@@ -136,12 +111,41 @@ const ArticleList = () => {
             </Box>
             <BlogTags tags={['RRSS', 'Tendencias']} marginTop={3} />
             <Heading fontSize="xl" marginTop="2">
-              <Link href="/blog/tendencias-redes-sociales" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
+              <Link fontFamily={'Montserrat'} href="/blog/tendencias-redes-sociales" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
               Tendencias en Redes Sociales 2023
               </Link>
             </Heading>
-            <Text as="p" fontSize="md" marginTop="2">             
+            <Text textAlign={'justify'} fontFamily={'Montserrat'} as="p" fontSize="md" marginTop="2">             
               En 2023, las redes sociales ofrecen emocionantes oportunidades para destacar en el marketing digital. Las tendencias clave incluyen el contenido efímero y auténtico, la realidad aumentada para experiencias inmersivas, el e-commerce social, el contenido de valor y propósito, y las comunidades en línea. Adoptar estas tendencias permitirá a las marcas conectar de manera significativa con su audiencia y destacar en el mundo digital.
+            </Text>
+          </Box>
+        </WrapItem>
+        <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
+          <Box w="100%">
+            <Box borderRadius="lg" overflow="hidden">
+              <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                <Image
+                  transform="scale(1.0)"
+                  src={
+                    '../google.jpg'}
+                  alt="some text"
+                  objectFit="cover"
+                  width="100%"
+                  height={250}
+                  transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: 'scale(1.05)',
+                  }}
+                />
+              </Box>
+            </Box>
+            <BlogTags tags={['SEO', 'Posicionamiento']} marginTop={3} />
+            <Heading fontSize="xl" marginTop="2">
+              <Link fontFamily={'Montserrat'} href="/blog/seo-posicionamiento-google" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
+              SEO: Mejora tu Posicionamiento en Google             </Link>
+            </Heading>
+            <Text textAlign={'justify'} as="p" fontSize="md" marginTop="2" fontFamily={'Montserrat'}>
+            Descubre la importancia del SEO para tu negocio en línea. Aprende a mejorar el posicionamiento en Google, obtener enlaces de calidad y brindar una experiencia excepcional al usuario. Con estrategias efectivas de SEO, alcanzarás el éxito en las búsquedas y atraerás a más clientes potenciales.
             </Text>
           </Box>
         </WrapItem>
@@ -154,8 +158,9 @@ const ArticleList = () => {
                   src={
                     '../emailmarketing.jpg'}
                   alt="some text"
-                  objectFit="contain"
+                  objectFit="cover"
                   width="100%"
+                  height={250}
                   transition="0.3s ease-in-out"
                   _hover={{
                     transform: 'scale(1.05)',
@@ -165,11 +170,11 @@ const ArticleList = () => {
             </Box>
             <BlogTags tags={['Estrategia', 'Digital']} marginTop={3} />
             <Heading fontSize="xl" marginTop="2">
-              <Link href="/blog/email-marketing-digital" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
+              <Link fontFamily={'Montserrat'} href="/blog/email-marketing-digital" textDecoration="none" _hover={{ textDecoration: 'none', opacity: 0.8 }}>
               Email Marketing en la Era Digital
               </Link>
             </Heading>
-            <Text as="p" fontSize="md" marginTop="2">
+            <Text fontFamily={'Montserrat'} as="p" fontSize="md" marginTop="2">
             Impulsa tu negocio con el poder del email marketing en la era digital. Descubre las tendencias y mejores prácticas para crear campañas efectivas y personalizadas que cautiven a tu audiencia y aumenten las conversiones. Maximiza el potencial de esta poderosa herramienta en tu estrategia de marketing digital y establece conexiones duraderas con tus clientes.
             </Text>
           </Box>
