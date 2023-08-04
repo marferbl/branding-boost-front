@@ -9,24 +9,28 @@ import {
   VStack,
   Link,
   Flex,
-  Image
+  Image,
+  Center
 } from '@chakra-ui/react';
 
 const Article1 = () => {
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW={'7xl'}  p={{base: 4, lg: 12}}>
       <Flex direction={{ base: 'column', lg: 'row' }} justify="space-between">
         <Box flex="1">
           <Heading as="h1" size="xl" mb="6" fontFamily={"Montserrat"}>
           SEO: Mejora tu Posicionamiento en Google
           </Heading>
+          <Center>
           <Image
              src={
               '../google.jpg'}
             alt="Imagen del artículo"
             mb="6"
+            height={200}
             borderRadius="lg"
           />
+          </Center>
           <Text fontSize="lg" color={useColorModeValue('gray.700', 'gray.200')} mb="6" fontFamily={"Montserrat"} justifyContent={'center'}>
           En este artículo vamos a hablar sobre uno de los temas más importantes para cualquier negocio en línea: el SEO. Si deseas que tu sitio web destaque en Google y atraiga a más clientes potenciales, este artículo es para ti. Acompáñanos en este viaje para aprender cómo mejorar tu posicionamiento en los resultados de búsqueda y lograr un despegue exitoso en el mundo digital.          </Text>
           <Text fontSize="lg" color={useColorModeValue('gray.700', 'gray.200')} mb="6" fontFamily={"Montserrat"} fontWeight={'bold'} justifyContent={'center'}>
